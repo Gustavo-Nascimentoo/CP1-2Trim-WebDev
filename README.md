@@ -1,181 +1,125 @@
-# 🎬 CineVerse
+# CineVerse
 
-> **CP1 — 2º Trimestre — WebDev — Criando o novo TV Time**
+> CP1 — 2º Trimestre — WebDev — "Criando o novo TV Time"
 
-## 👤 Integrante
+## Integrantes do grupo
 
-- **Gustavo Almeida Lopes do Nascimento**
-- **RM:** 571070
+- [Nome completo 1]
+- [Nome completo 2] (se houver)
+- [Nome completo 3] (se houver)
 
----
+## Problema
 
-## 📌 Sobre o projeto
+O TV Time encerrou suas atividades em julho de 2026 e apagou os dados de
+todos os usuários. Quem acompanhava várias séries ao mesmo tempo perdeu a
+forma mais simples de responder a uma pergunta recorrente: **"em que
+episódio eu parei?"**.
 
-O **CineVerse** é uma plataforma web desenvolvida em React para pessoas que acompanham filmes e séries.
+## Solução
 
-O projeto surgiu a partir do desafio de criar um MVP inspirado no problema apresentado na proposta **"Criando o novo TV Time"**.
+O **CineVerse** é uma plataforma web para descobrir séries, marcar quais
+delas você está acompanhando e registrar episódio a episódio o que já foi
+assistido. A partir disso, a aplicação calcula e exibe, para cada série,
+exatamente qual é o próximo episódio a assistir — sem precisar lembrar de
+nada.
 
-A plataforma busca facilitar o acompanhamento de séries e episódios, permitindo que o usuário organize seus conteúdos, registre o que já assistiu e descubra qual episódio deve assistir em seguida.
+### Funcionalidades
 
-O visual do projeto teve como principal referência o **Letterboxd**, além de elementos observados no **Netflix** e no **Spotify**.
+- Descobrir séries em alta na semana (Home).
+- Buscar séries pelo nome.
+- Ver detalhes de uma série: sinopse, nota, ano e lista de temporadas.
+- Marcar/desmarcar uma série como "acompanhando".
+- Marcar/desmarcar episódios de uma temporada como assistidos, com barra
+  de progresso.
+- Ver, na página "Minha lista", o próximo episódio não assistido de cada
+  série acompanhada (ou "Você está em dia!" quando não há pendências).
+- Remover uma série da lista de acompanhamento.
 
----
+## Tecnologias
 
-## 💡 Problema
+- [React 18](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [React Router DOM v6](https://reactrouter.com/) — rotas, layout e rotas
+  dinâmicas
+- [react-icons](https://react-icons.github.io/react-icons/) — ícones
+- `localStorage` — persistência do progresso do usuário (sem back-end)
 
-Pessoas que acompanham várias séries podem ter dificuldade para lembrar:
+## API usada
 
-- Quais séries estão acompanhando;
-- Em qual temporada pararam;
-- Qual foi o último episódio assistido;
-- Qual episódio devem assistir em seguida;
-- Quais conteúdos desejam assistir posteriormente.
+[TMDB — The Movie Database](https://developer.themoviedb.org/docs/getting-started)
+(`/trending/tv/week`, `/search/tv`, `/tv/{id}`,
+`/tv/{id}/season/{season_number}`).
 
----
+## Uso de IA
 
-## 🚀 Solução
+Este projeto foi desenvolvido seguindo a metodologia de **Spec Driven
+Development**: a especificação (`docs/requirements.md` e
+`docs/architecture.md`) foi definida antes da implementação do código,
+guiando as decisões técnicas e de produto tomadas pelo grupo.
 
-O CineVerse centraliza essas informações em uma plataforma web.
+A IA (Claude) foi utilizada como apoio em:
 
-A aplicação permite:
+- Estruturação da especificação (requisitos, user stories, arquitetura de
+  componentes e rotas) a partir do problema escolhido pelo grupo.
+- Geração do código inicial dos componentes, páginas, hooks e estilos,
+  seguindo a arquitetura definida na especificação.
+- Redação da documentação (`README.md`, `docs/`).
 
-- 🔎 Descobrir e pesquisar séries;
-- 📺 Visualizar detalhes de séries;
-- 📚 Visualizar temporadas e episódios;
-- ✅ Marcar episódios como assistidos;
-- ▶️ Identificar o próximo episódio;
-- 📊 Acompanhar o progresso das séries;
-- 🔖 Organizar conteúdos para assistir;
-- ⭐ Registrar avaliações;
-- 📝 Registrar opiniões;
-- 💬 Comentar conteúdos;
-- ⚠️ Proteger comentários com spoilers;
-- 📋 Criar listas;
-- 👤 Visualizar perfil e estatísticas;
-- 👥 Interagir com recursos de comunidade.
+As decisões de **produto** (qual problema resolver), de **design**
+(paleta, tipografia, layout) e de **arquitetura técnica** (quais
+componentes existem, como o estado é dividido entre eles, como o
+progresso é persistido) foram feitas e revisadas pelo grupo, que é capaz
+de explicar o funcionamento de cada parte do código.
 
----
+> ⚠️ Antes de entregar, revise este trecho e ajuste com a experiência real
+> do seu grupo (o que vocês mudaram, o que vocês entenderam e puderam
+> explicar, eventuais partes reescritas à mão).
 
-## ✨ Funcionalidades
+## Como rodar o projeto
 
-### 🔎 Descoberta e busca
+### Pré-requisitos
 
-- Séries em destaque na página inicial;
-- Busca de séries pelo nome;
-- Exibição dos resultados encontrados;
-- Página de detalhes das séries.
+- [Node.js](https://nodejs.org/) 18 ou superior
+- Uma chave de API gratuita do TMDB ([criar conta e gerar chave aqui](https://www.themoviedb.org/settings/api))
 
-### 📺 Acompanhamento de séries
+### Passo a passo
 
-- Adicionar séries à lista de acompanhamento;
-- Remover séries da lista;
-- Visualizar temporadas;
-- Visualizar episódios;
-- Marcar episódios como assistidos;
-- Desmarcar episódios;
-- Visualizar o progresso;
-- Identificar o próximo episódio.
+```bash
+# 1. Instale as dependências
+npm install
 
-### 📚 Biblioteca e listas
+# 2. Crie o arquivo de variáveis de ambiente a partir do exemplo
+cp .env.example .env
 
-- Histórico de conteúdos assistidos;
-- Conteúdos que o usuário deseja assistir;
-- Criação de listas personalizadas;
-- Organização dos conteúdos.
+# 3. Abra o arquivo .env e cole sua chave da TMDB (API Key v3 auth)
+#    VITE_TMDB_API_KEY=sua_chave_aqui
 
-### ⭐ Avaliações
+# 4. Rode o projeto em modo desenvolvimento
+npm run dev
+```
 
-- Avaliação de conteúdos;
-- Registro de opiniões;
-- Visualização das avaliações.
+O terminal vai mostrar um endereço local (algo como
+`http://localhost:5173`) — abra-o no navegador.
 
-### 💬 Comunidade
+### Build de produção
 
-- Comentários;
-- Comentários com spoiler;
-- Exclusão dos próprios comentários;
-- Usuários para seguir;
-- Atividade da comunidade.
+```bash
+npm run build
+npm run preview
+```
 
-### 👤 Perfil
+### Deploy
 
-- Histórico;
-- Estatísticas pessoais;
-- Listas;
-- Avaliações;
-- Preferência relacionada à proteção contra spoilers.
+O projeto está pronto para deploy na [Vercel](https://vercel.com/):
+importe o repositório do GitHub, defina o framework como **Vite** e
+adicione a variável de ambiente `VITE_TMDB_API_KEY` nas configurações do
+projeto na Vercel (Settings → Environment Variables) antes de publicar.
 
----
+## Documentação completa
 
-## 🛠️ Tecnologias utilizadas
-
-- ⚛️ React
-- ⚡ Vite
-- 🛣️ React Router DOM
-- 🎨 CSS
-- 🔎 TMDB API
-- 🎯 React Icons
-- 💾 localStorage
-- 💻 JavaScript
-
----
-
-## ⚛️ React
-
-O projeto utiliza **componentização** para dividir a aplicação em componentes reutilizáveis.
-
-Também são utilizados:
-
-- Props;
-- `useState`;
-- `useEffect`;
-- `useMemo`;
-- Hooks customizados;
-- Renderização de listas;
-- Eventos;
-- Formulários;
-- Componentes reutilizáveis.
-
-O código dos componentes utiliza **arrow functions**.
-
----
-
-## 🛣️ Rotas
-
-O CineVerse utiliza React Router para criar múltiplas páginas, layout compartilhado e rotas dinâmicas.
-
-| Rota | Página |
-|---|---|
-| `/` | Home |
-| `/busca` | Busca |
-| `/minha-lista` | Minha lista |
-| `/biblioteca` | Biblioteca |
-| `/listas` | Listas |
-| `/comunidade` | Comunidade |
-| `/perfil` | Perfil |
-| `/serie/:id` | Detalhes da série |
-| `/serie/:id/temporada/:temporada` | Temporada |
-| `*` | Página não encontrada |
-
----
-
-## 🌐 API — TMDB
-
-O projeto utiliza a **The Movie Database (TMDB)** para obter informações sobre séries.
-
-A API é utilizada para:
-
-- Séries em alta;
-- Pesquisa de séries;
-- Detalhes das séries;
-- Temporadas;
-- Episódios.
-
-### Documentação
-
-https://developer.themoviedb.org/docs/getting-started
-
-A chave da API deve ser configurada através da variável de ambiente:
-
-```env
-VITE_TMDB_API_KEY=sua_chave_aqui
+- [`docs/requirements.md`](docs/requirements.md) — objetivo, público,
+  user stories, critérios de aceitação, estados e regras do produto.
+- [`docs/architecture.md`](docs/architecture.md) — páginas, rotas,
+  componentes, props, estados e efeitos.
+- [`docs/references/references.md`](docs/references/references.md) —
+  referências visuais e justificativas de design.
