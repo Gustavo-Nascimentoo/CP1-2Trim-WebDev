@@ -5,8 +5,7 @@
 ## Integrantes do grupo
 
 - [Nome completo 1]
-- [Nome completo 2] (se houver)
-- [Nome completo 3] (se houver)
+
 
 ## Problema
 
@@ -63,17 +62,13 @@ A IA (Claude) foi utilizada como apoio em:
   componentes e rotas) a partir do problema escolhido pelo grupo.
 - Geração do código inicial dos componentes, páginas, hooks e estilos,
   seguindo a arquitetura definida na especificação.
-- Redação da documentação (`README.md`, `docs/`).
 
-As decisões de **produto** (qual problema resolver), de **design**
-(paleta, tipografia, layout) e de **arquitetura técnica** (quais
-componentes existem, como o estado é dividido entre eles, como o
-progresso é persistido) foram feitas e revisadas pelo grupo, que é capaz
-de explicar o funcionamento de cada parte do código.
+A IA (Chatgpt) foi utilizada como apoio em:
 
-> ⚠️ Antes de entregar, revise este trecho e ajuste com a experiência real
-> do seu grupo (o que vocês mudaram, o que vocês entenderam e puderam
-> explicar, eventuais partes reescritas à mão).
+Arrumar problemas de deploy no Vercel
+
+- As decisões do site sobre design e outros tipos de arquitetura foram
+  escolhidos por mim
 
 ## Como rodar o projeto
 
