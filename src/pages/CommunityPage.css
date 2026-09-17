@@ -1,0 +1,80 @@
+.community-grid {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 28px;
+  margin-top: 28px;
+}
+
+.feed-card,
+.person {
+  display: flex;
+  gap: 14px;
+  padding: 18px;
+  border: 1px solid var(--ink-line);
+  background: var(--ink-soft);
+  border-radius: 7px;
+  margin: 12px 0;
+}
+
+.feed-card:hover,
+.person:hover {
+  border-color: #53615b;
+}
+
+.avatar {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #29332e;
+  color: var(--amber);
+  font-weight: 800;
+}
+
+.feed-card p {
+  color: var(--muted);
+}
+
+.feed-card strong {
+  color: var(--paper);
+}
+
+.feed-text {
+  margin-top: 8px;
+  color: var(--paper) !important;
+}
+
+.feed-actions {
+  display: flex;
+  gap: 18px;
+  margin-top: 12px;
+  color: var(--muted);
+}
+
+.feed-actions span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.person {
+  align-items: center;
+}
+
+.person > div:nth-child(2) {
+  flex: 1;
+}
+
+.person small {
+  display: block;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+@media (max-width: 800px) {
+  .community-grid {
+    grid-template-columns: 1fr;
+  }
+}

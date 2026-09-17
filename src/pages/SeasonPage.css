@@ -1,0 +1,20 @@
+.season-page {
+  max-width: 640px;
+}
+
+.season-page__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.season-page__progress {
+  margin-bottom: 20px;
+}
+
+.episode-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

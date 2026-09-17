@@ -1,0 +1,68 @@
+.episode-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  border: 1px solid var(--ink-line);
+  border-radius: var(--radius-sm);
+  background: var(--ink-soft);
+}
+
+.episode-item + .episode-item {
+  margin-top: 8px;
+}
+
+.episode-item--watched {
+  opacity: 0.6;
+}
+
+.episode-item__toggle {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 1.2rem;
+  display: flex;
+  padding: 0;
+}
+
+.episode-item--watched .episode-item__toggle {
+  color: var(--teal);
+}
+
+.episode-item__info {
+  flex: 1;
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  min-width: 0;
+}
+
+.episode-item__number {
+  font-family: var(--font-display);
+  color: var(--amber);
+  letter-spacing: 0.03em;
+  flex-shrink: 0;
+}
+
+.episode-item__name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+.episode-item--watched .episode-item__name {
+  text-decoration: line-through;
+}
+
+.episode-item__date {
+  font-size: 0.78rem;
+  color: var(--muted);
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .episode-item__date {
+    display: none;
+  }
+}
