@@ -4,7 +4,7 @@
 
 ## Integrantes do grupo
 
-- [Nome completo 1]
+- Gustavo Almeida Lopes do Nascimento RM: 571070
 
 
 ## Problema
